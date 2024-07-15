@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - TAMARAW BEER</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+        }
+
+        .w3-sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            box-sizing: border-box;
+            margin-left: 70px;
+            padding-bottom: 100px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: black;
+            border-bottom: 2px solid #FFDD00;
+        }
+
+        .header img {
+            width: 150px;
+            height: auto;
+        }
+
+        .navigation {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .navigation a {
+            margin-left: 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .navigation a:hover {
+            color: #FFDD00;
+        }
+
+        .about-us {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-grow: 1;
+            padding: 20px;
+            background-color: black;
+        }
+
+        .about-us-content {
+            position: relative;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            color: white;
+            text-align: justify;
+            max-width: 1200px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .about-us-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(beerbg01.jpg) no-repeat center center;
+            background-size: cover;
+            filter: brightness(0.5);
+            z-index: -1;
+        }
+
+        .about-us-content h2 {
+            text-align: center;
+            font-size: 32px;
+            color: gold;
+            margin-bottom: 20px;
+        }
+
+        .about-us-content p {
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        .workers-photo {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .workers-photo img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .workers-photo .context-text {
+            color: #FFDD00;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: black;
+            color: white;
+            border-top: 2px solid #FFDD00;
+        }
+
+        .footer img {
+            width: 150px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .wrapper {
+                margin-left: 0;
+            }
+
+            .navigation {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navigation a {
+                margin: 10px 0;
+            }
+
+            .about-us {
+                padding: 10px;
+            }
+
+            .about-us-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="w3-sidebar w3-bar-block w3-black w3-xxlarge" style="width:70px">
+    </div>
+
+    <div id="myOverlay" class="overlay">
+        <span class="closebtn" onclick="closeSearch()" title="Close Overlay">x</span>
+        <div class="overlay-content">
+            <form id="searchForm" onsubmit="handleSearch(event)">
+                <input type="text" id="searchInput" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="LOGO.png" alt="Tamaraw Beer Logo">
+                </a>
+            </div>
+            <div class="navigation">
+                <a href="index.html"><b>Home</b></a>
+                <a href="aboutus.html">About Us</a>
+                <a href="menu.html">Menu</a>
+                <a href="delivery.html">Delivery</a>
+                <a href="promotions.html">Promotions</a>
+                <a href="branches.html">Branches</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+
+        <div class="about-us">
+            <div class="about-us-content">
+                <h2>About Us</h2>
+                <p>
+                    Tamaraw Beer is more than just a brewery; it's a dedication to craftsmanship and tradition. Founded with a vision to deliver premium quality brews, we strive to offer a diverse range of beers that cater to every palate. Our commitment to excellence is reflected in each sip of our meticulously crafted beers, which embody the rich heritage and passion of our founders.
+                    <br><br>
+                    Founded in 2024, Tamaraw Beer began as a dream of Carlo Dulutan, a visionary entrepreneur with a deep-rooted passion for brewing. His journey started with a humble desire to create beers that not only satisfy but also elevate the drinking experience. Today, Tamaraw Beer stands as a testament to his dedication and the collective effort of our team.
+                    <br><br>
+                    At Tamaraw Beer, our goal is simple yet profound: to redefine the art of brewing. We aim to expand our reach while maintaining our unwavering commitment to quality and customer satisfaction. Whether you're enjoying our beers at one of our locations, exploring our seasonal offerings, or connecting with us through our community engagements, we invite you to experience the essence of Tamaraw Beer.
+                </p>
+            </div>
+        </div>
+
+        <div class="workers-photo">
+            <img src="workers.jpg" alt="Workers at Tamaraw Beer">
+            <div class="context-text">Tamaraw Beer Workers July 11, 2024</div>
+        </div>
+
+        <div class="footer">
+            <img src="LOGO.png" alt="Tamaraw Beer Logo">
+            <p><i>© 2024 Tamaraw Beer. All rights reserved.<br>10/F Tamaraw Plaza Building, Emerald Ave., Ortigas Center, Pasig City 1600</i></p>
+        </div>
+    </div>
+
+    <script>
+        function openSearch() {
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function closeSearch() {
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        function handleSearch(event) {
+            event.preventDefault();
+            let searchTerm = document.getElementById("searchInput").value.toLowerCase().trim();
+
+            const searchTerms = {
+                "branches": "branches.html",
+                "promotions": "promotions.html",
+                "contact": "index.html#contact",
+                "about": "aboutus.html"
+            };
+
+            if (searchTerms.hasOwnProperty(searchTerm)) {
+                window.location.href = searchTerms[searchTerm];
+            } else {
+                alert("No matching results found for your search.");
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+    var contactLink = document.querySelector('.contact-link'); 
+
+    contactLink.addEventListener('click', function(event) {
+        event.preventDefault(); 
+
+        const searchTerms = {
+            "contact": "index.html#contact"
+        };
+
+        if (searchTerms.hasOwnProperty('contact')) {
+            window.location.href = searchTerms['contact'];
+        } else {
+            alert("No matching results found for your search.");
+        }
+    });
+});
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery | TAMARAW BEER</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+        }
+
+        .w3-sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 70px;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            box-sizing: border-box;
+            margin-left: 70px;
+            padding-bottom: 100px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: black;
+            border-bottom: 2px solid #FFDD00;
+        }
+
+        .header img {
+            width: 150px;
+            height: auto;
+        }
+
+        .navigation {
+            display: flex;
+            align-items: center;
+        }
+
+        .navigation a {
+            margin-left: 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .navigation a:hover {
+            color: #FFDD00;
+        }
+
+        .background {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            box-sizing: border-box;
+            background-color: black;
+            padding: 20px;
+        }
+
+        .content {
+            flex-grow: 1;
+            max-width: 600px;
+            width: 100%; 
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .delivery-form {
+            background-color: black;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .delivery-form h2 {
+            color: gold;
+            margin-bottom: 20px;
+        }
+
+        .delivery-form label {
+            display: block;
+            margin-bottom: 5px;
+            text-align: left; 
+        }
+
+        .delivery-form input[type="text"],
+        .delivery-form input[type="email"],
+        .delivery-form input[type="tel"],
+        .delivery-form textarea,
+        .delivery-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px; 
+            border: none;
+            background-color: white;
+            border-radius: 3px;
+            box-sizing: border-box; 
+        }
+
+        .delivery-form button {
+            padding: 12px 20px;
+            background-color: gold;
+            color: black;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .delivery-form button:hover {
+            background-color: #FFDD00;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: black;
+            color: white;
+            border-top: 2px solid #FFDD00;
+        }
+
+        .footer img {
+            width: 150px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="w3-sidebar w3-bar-block w3-black w3-xxlarge">
+    </div>
+
+    <div class="wrapper">
+        <div class="header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="LOGO.png" alt="Tamaraw Beer Logo">
+                </a>
+            </div>
+            <div class="navigation">
+                <a href="index.html"><b>Home</b></a>
+                <a href="aboutus.html">About Us</a>
+                <a href="menu.html">Menu</a>
+                <a href="delivery.html">Delivery</a>
+                <a href="promotions.html">Promotions</a>
+                <a href="branches.html">Branches</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+
+        <div class="background">
+            <div class="content">
+                <div class="delivery-form">
+                    <h2>Delivery Request Form</h2>
+                    <form action="https://formsubmit.co/dulutancarlo31@gmail.com" method="POST">
+                        <label for="Name">Name:</label>
+                        <input type="text" id="Name" name="Name" required>
+
+                        <label for="email">Email:</label>
+                        <input type="Email" id="Email" name="Email" required>
+
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="Phone" name="Phone" required>
+
+                        <label for="address">Delivery Address:</label>
+                        <textarea id="Address" name="Address" rows="4" required></textarea>
+
+                        <label for="Drink">Choose Drink:</label>
+                        <select id="Drink" name="Drink" required>
+                            <option value="">Select Drink</option>
+                            <option value="Tamaraw Beer">Tamaraw Beer</option>
+                            <option value="Tamaraw Wine">Tamaraw Wine</option>
+                            <option value="Tamaraw Whiskey">Tamaraw Whiskey</option>
+                            <option value="Tamaraw Vodka">Tamaraw Vodka</option>
+                            <option value="Tamaraw Rum">Tamaraw Rum</option>
+                            <option value="Tamaraw Tequila">Tamaraw Tequila</option>
+                        </select>
+
+                        <button type="submit">Submit Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <img src="LOGO.png" alt="Tamaraw Beer Logo">
+            <p><i>© 2024 Tamaraw Beer. All rights reserved.<br>10/F Tamaraw Plaza Building, Emerald Ave., Ortigas Center, Pasig City 1600</i></p>
+        </div>
+    </div>
+</body>
+</html>

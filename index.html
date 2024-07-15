@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAMARAW BEER</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    </style>
+</head>
+<body>
+
+    <div class="w3-sidebar w3-bar-block w3-black w3-xxlarge" style="width:70px">
+        <a href="#" class="w3-bar-item w3-button" onclick="openSearch()"><i class="fa fa-search"></i></a>
+    </div>
+
+    <div id="myOverlay" class="overlay">
+        <span class="closebtn" onclick="closeSearch()" title="Close Overlay">x</span>
+        <div class="overlay-content">
+            <form id="searchForm" onsubmit="handleSearch(event)">
+                <input type="text" id="searchInput" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <div class="background">
+        <div class="wrapper">
+
+            <div class="header">
+                <div class="logo">
+                    <a href="#">
+                        <img src="LOGO.png" alt="Tamaraw Beer Logo">
+                    </a>
+                </div>
+                <div class="navigation">
+                    <a href="index.html"><b>Home</b></a>
+                    <a href="aboutus.html">About Us</a>
+                    <a href="menu.html">Menu</a>
+                    <a href="delivery.html">Delivery</a>
+                    <a href="promotions.html">Promotions</a>
+                    <a href="branches.html">Branches</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+                
+            </div>
+
+            <div class="header-banner"></div>
+
+            <div class="intro-text-area">
+
+            <div class="promotions" id="promotions-section">
+
+            </div>
+
+            <div class="boxes">
+                <div class="box">
+                    <img src="BEER PHOTO 1.png" alt="Tamaraw Beer Image 1">
+                </div>
+                <div class="box">
+                    <img src="BEER PHOTO 3.png" alt="Tamaraw Beer Image 2">
+                </div>
+                <div class="box">
+                    <img src="BEER PHOTO 2.png" alt="Tamaraw Beer Image 3">
+                </div>
+            </div>
+
+            <div class="banner-slot">
+                <img src="BANNER2.jpg" alt="Banner Image">
+                <p>
+                    Immerse yourself in the world of Tamaraw Beer, where tradition meets innovation to craft exceptional brews. Born from a legacy of quality and passion, each sip of Tamaraw Beer embodies a celebration of finely brewed perfection. From crisp lagers to robust ales, our diverse selection caters to every palate, promising a journey of flavor and satisfaction. Whether enjoyed at our welcoming locations, delivered to your doorstep, or featured in our seasonal promotions, Tamaraw Beer invites you to savor the true essence of premium brewing excellence.
+                </p>
+            </div>
+
+            <div class="contact" id="contact">
+                <h2>Contact Us</h2>
+                <p>Contact Number: (032) 232-581-986</p>
+                <p>Email: <a href="mailto:tamarawbeerofficial@email.com">tamarawbeerofficial@email.com</a></p>
+                <div class="social-media">
+                    <a href="https://twitter.com/TamarawBeer" target="_blank" class="fa fa-twitter"></a>
+                    <a href="https://facebook.com/TamarawBeerOfficial" target="_blank" class="fa fa-facebook"></a>
+                    <a href="https://instagram.com/TamarawBeer" target="_blank" class="fa fa-instagram"></a>
+                </div>
+            </div>
+
+            <div class="footer">
+                <img src="LOGO.png" alt="Tamaraw Beer Logo">
+                <p><i>© 2024 Tamaraw Beer. All rights reserved.<br>10/F Tamaraw Plaza Building, Emerald Ave., Ortigas Center, Pasig City 1600</i></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openSearch() {
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function closeSearch() {
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        function handleSearch(event) {
+            event.preventDefault();
+            let searchTerm = document.getElementById("searchInput").value.toLowerCase().trim();
+
+            const searchTerms = {
+                "branches": "branches.html",
+                "promotions": "promotions.html",
+                "contact": "index.html#contact",
+                "about": "aboutus.html",
+                "delivery": "delivery.html",
+                "menu": "menu.html"
+            };
+
+            if (searchTerms.hasOwnProperty(searchTerm)) {
+                window.location.href = searchTerms[searchTerm];
+            } else {
+                alert("No matching results found for your search.");
+            }
+        }
+    </script>
+
+</body>
+</html>
